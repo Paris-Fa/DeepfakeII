@@ -144,12 +144,6 @@ This feature evaluates the **accuracy of the Text-to-Speech (TTS) model** by com
      - `output_path`: The file path where the differences should be saved.  
    - **Output:** The differences are stored in a text file.
 
-### 📌 Example Usage:
-```python
-stt_result_text = run_whisper_stt("generated_audio.wav")  # Converts speech back to text.
-differences = compare_texts("Expected text", stt_result_text)  # Compares STT output with the original TTS input.
-save_differences(differences, "differences.txt")  # Saves detected differences.
-```
 
 
 
