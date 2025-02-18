@@ -103,6 +103,12 @@ python deepfakes.py lip-sync --start-frame 10
 ```
 The ouput videos are store in folder ./data/lip_sync
 ```
+# Dubbing and Translation feature
+
+If you have a video in a language like German and want to get a video with the same content but in English you can use this feature:
+
+
+
 # Key Enhancements in This Version
 ## 1.Pause Function
 
