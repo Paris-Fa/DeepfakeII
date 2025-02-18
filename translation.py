@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 
 # Hardcoded API Key
-DEEPL_API_KEY = "0aa5c1fd-b8b9-43cd-81a4-82c40397ac1a"  # Replace with your actual DeepL API key
+DEEPL_API_KEY = "ApI-code"  # Replace with your actual DeepL API key
 
 def translate_files(input_folder, output_folder):
     """
