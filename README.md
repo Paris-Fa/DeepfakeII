@@ -51,8 +51,8 @@ python deepfakes.py vc-train --max-epoch 1000
 # Inference
 ## 1.Text-to-speech
 
-1. prepere the script(s) you want to turn into an audio in .txt format.Each file will be used to create one audio.
-2. we have added a pause function.you can add pauses with your desired duration between the sentence.while preparing the text add [pausex] .replace x with the desired duration. reemember to not add a space between pause and y.
+1. prepere the script(s) you want to turn into an audio in .txt format.Each file will be used to create one audio.**do not use characters like ü,ä,ö and instead use ue,ae,oe.do not use numbers like 23 and instead use twnty-three in your text.**
+2. we have added a ** pause function **.you can add pauses with your desired duration between the sentence.while preparing the text add [pausex] .replace x with the desired duration. reemember to not add a space between pause and y.
 3. place the script(s) in this folder ```./data/input/text.```.
 4. Run the following command.
 ```
@@ -64,6 +64,8 @@ If you have several scripts but want to use only one of them use this command
 python deepfakes.py tts-bark --input-path ./path-to-file/text.txt
 ```
 The output audio will be store in folder ```./data/tts.```
+
+** Error Feedback Funtion **
 
 when Bark converts text to audio there might be errors in Bark's Audio output.to find this errors user had to listen to each audio. we added an error correction feedback to automate this process,this function captures the errors of the bark output and gives you a text file that includes the comparison between the original text input and the transcription of bark audio output which we get using [open-Ai whisper](https://github.com/openai/whisper.git) .the file is stored at ```./data/tts.``` and the differences are flaged with **
 
@@ -82,6 +84,24 @@ python deepfakes.py vc-infer --input-path ./path-to-file/audio.wav
 Note that, the latest trained model in folder ```./data/vc_train/model``` is used by default. To use a specific trained model (e.g. G_5000.pth), please include ```--model-path``` as follows:
 ```
 python deepfakes.py vc-infer --model-path ./data/vc_train/model/G_5000.pth
+```
+## 3. Lip-sync
+1. prepare a video for lip-sync model input.preferably a video without lip movement.
+2. Place them in folder ```/data/input/video```.
+3. Run the following command(will apply lip-sync for every audio with a random video in the folder. ):
+```
+python deepfakes.py lip-sync
+```
+To specify the audio and video, please use this command:
+```
+python deepfakes.py lip-sync --audio-path ./data/vc/converted_audio.wav --video-path ./data/input/video/video.mp4
+```
+To make the output videos look different, the model starts the lip-sync from a random frame of the input video till the end. To specify the starting frame, please add the argument ```--start-frame```:
+```
+python deepfakes.py lip-sync --start-frame 10
+```
+```
+The ouput videos are store in folder ./data/lip_sync
 ```
 # Key Enhancements in This Version
 ## 1.Pause Function
