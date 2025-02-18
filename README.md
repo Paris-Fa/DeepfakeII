@@ -65,7 +65,7 @@ python deepfakes.py tts-bark --input-path ./path-to-file/text.txt
 ```
 The output audio will be store in folder ```./data/tts.```
 
-** Error Feedback Funtion **
+* Error Feedback Funtion *
 
 when Bark converts text to audio there might be errors in Bark's Audio output.to find this errors user had to listen to each audio. we added an error correction feedback to automate this process,this function captures the errors of the bark output and gives you a text file that includes the comparison between the original text input and the transcription of bark audio output which we get using [open-Ai whisper](https://github.com/openai/whisper.git) .the file is stored at ```./data/tts.``` and the differences are flaged with **
 
@@ -166,4 +166,14 @@ This feature evaluates the **accuracy of the Text-to-Speech (TTS) model** by com
 
 
 
+## Disclaimer
 
+This project was primarily created to generate video with educational content and shouldn't be used to create harmful content.The authors do not take responsibility for any generated output.
+
+## Contributors
+
+Thanks to the following people who contributed to this project:
+
+*[@Paris-Fa](https://github.com/Paris-Fa)
+*[@Sahar-Mgh](https://github.com/Sahar-Mgh)
+*[@lacinboz](https://github.com/lacinboz)
