@@ -174,6 +174,6 @@ This project was primarily created to generate video with educational content an
 
 Thanks to the following people who contributed to this project:
 
-*[@Paris-Fa](https://github.com/Paris-Fa)
-*[@Sahar-Mgh](https://github.com/Sahar-Mgh)
-*[@lacinboz](https://github.com/lacinboz)
+* [@Paris-Fa](https://github.com/Paris-Fa)
+* [@Sahar-Mgh](https://github.com/Sahar-Mgh)
+* [@lacinboz](https://github.com/lacinboz)
