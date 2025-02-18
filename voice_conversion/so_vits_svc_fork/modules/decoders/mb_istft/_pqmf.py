@@ -6,7 +6,8 @@
 import numpy as np
 import torch
 import torch.nn.functional as F
-from scipy.signal import kaiser
+import scipy.signal 
+import kaiser
 
 
 def design_prototype_filter(taps=62, cutoff_ratio=0.15, beta=9.0):
