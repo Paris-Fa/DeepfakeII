@@ -10,9 +10,9 @@ This project is the continuation of [Deepfakes_all_in_1](https://github.com/pn-p
 1.Install Miniconda and python
 2.Create a Conda environment and install the requirements
 ```
-git clone https://github.com/pn-pham/deepfakes_all_in_1.git
+git clone https://github.com/Paris-Fa/DeepfakeII.git
 
-cd deepfakes_all_in_1 
+cd DeepfakeII
 
 conda create -n deepfakes python==3.11.5
 
